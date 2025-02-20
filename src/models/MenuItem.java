@@ -1,22 +1,21 @@
-// MenuItem.java
 package models;
 
-import java.util.UUID;
-
 public class MenuItem {
-    private UUID id;
+    private int id;
     private String name;
     private double price;
     private String category;
 
-    public MenuItem(String name, double price, String category) {
-        this.id = UUID.randomUUID();
+    public MenuItem(int id, String name, double price, String category) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.category = category;
     }
 
-    public UUID getId() {
+
+
+    public int getId() {
         return id;
     }
 

@@ -11,11 +11,11 @@ public class MenuService {
     private final List<MenuItem> menu = new ArrayList<>();
 
     public MenuService() {
-        this.menu.add(new MenuItem("Burger", 5.99, "Main Course"));
-        this.menu.add(new MenuItem("Pizza", 8.99, "Main Course"));
-        this.menu.add(new MenuItem("Cola", 1.99, "Beverage"));
-        this.menu.add(new MenuItem("Pasta", 7.99, "Main Course"));
-        this.menu.add(new MenuItem("Salad", 4.99, "Appetizer"));
+        this.menu.add(new MenuItem(1,"Burger", 5.99, "Main Course"));
+        this.menu.add(new MenuItem(2, "Pizza", 8.99, "Main Course"));
+        this.menu.add(new MenuItem(3, "Cola", 1.99, "Beverage"));
+        this.menu.add(new MenuItem(4, "Pasta", 7.99, "Main Course"));
+        this.menu.add(new MenuItem(5, "Salad", 4.99, "Appetizer"));
     }
 
     public List<MenuItem> getItemsByCategory(String category) {
@@ -35,9 +35,9 @@ public class MenuService {
                 .orElse(null);
     }
 
-    public MenuItem getItemById(UUID id) {
+    public MenuItem getItemById(int id) {
         return this.menu.stream()
-                .filter(item -> item.getId().equals(id))
+                .filter(item -> item.getId() == id)
                 .findFirst()
                 .orElse(null);
     }

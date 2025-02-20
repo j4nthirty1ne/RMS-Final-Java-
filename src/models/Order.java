@@ -4,7 +4,6 @@ import services.MenuService;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class Order {
     private List<MenuItem> items;
@@ -19,7 +18,7 @@ public class Order {
     }
 
     // Order.java
-    public void addItemById(MenuService menuService, UUID id) {
+    public void addItemById(MenuService menuService, int id) {
         MenuItem item = menuService.getItemById(id);
         if (item != null) {
             addItem(item);

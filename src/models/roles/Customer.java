@@ -1,4 +1,4 @@
-package roles;
+package models.roles;
 
 import models.MenuItem;
 import models.Order;

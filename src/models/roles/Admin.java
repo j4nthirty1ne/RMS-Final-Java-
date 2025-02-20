@@ -1,5 +1,5 @@
 // Source code is decompiled from a .class file using FernFlower decompiler.
-package roles;
+package models.roles;
 
 import java.util.List;
 import models.MenuItem;

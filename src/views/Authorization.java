@@ -1,7 +1,8 @@
-package services;
+package views;
 
 import java.util.Scanner;
 import models.User;
+import services.UserService;
 
 public class Authorization {
     public void userAuth() {
