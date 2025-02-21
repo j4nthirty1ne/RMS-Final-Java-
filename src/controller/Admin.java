@@ -1,11 +1,9 @@
 package controller;
-
-import models.CategoryManager;
-import models.MenuItemManager;
-import models.StaffManager;
-import models.Utils;
-
 import java.util.Scanner;
+import services.Utils;
+import services.MenuItemManager;
+import services.CategoryManager;
+
 
 public class Admin {
     public void adminPanel() {
@@ -53,7 +51,7 @@ public class Admin {
                     break;
 
                 case 7:
-                    StaffManager.manageStaff(scanner);
+                   // StaffManager.manageStaff(scanner);
                     break;
                 case 8:
                     System.out.println("Exiting Admin Panel...");
