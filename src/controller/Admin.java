@@ -1,13 +1,10 @@
-package Controller;
+package controller;
 
 import models.CategoryManager;
 import models.MenuItemManager;
 import models.StaffManager;
 import models.Utils;
-import services.Utils;
 
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Admin {

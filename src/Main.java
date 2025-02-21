@@ -1,4 +1,4 @@
-import Controller.CustomerController;
+import controller.CustomerController;
 
 // Main.java
 class Main {
