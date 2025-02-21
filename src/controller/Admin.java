@@ -10,6 +10,8 @@ public class Admin {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+
+            System.out.println("\n============ Admin Panel ============");
             System.out.println("\n============ Admin Panel ============");
             System.out.println("1. Add Menu Items");
             System.out.println("2. Update Menu Items");
