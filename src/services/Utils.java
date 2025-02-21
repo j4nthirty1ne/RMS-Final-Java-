@@ -9,14 +9,16 @@ import static java.awt.SystemColor.menu;
 
 public class Utils {
 
-    // Helper method to validate integer input within a range
+    //validate integer input within a range
+    public static final Scanner scanner = new Scanner(System.in);
+
     public static int validateIntegerInput(Scanner scanner, String prompt, int min, int max) {
         while (true) {
             System.out.print(prompt);
             String input = scanner.nextLine().trim();
 
             if (input.equalsIgnoreCase("b")) {
-                return -1; // Return -1 to indicate the admin wants to go back
+                return -1;
             }
 
             try {
@@ -32,7 +34,7 @@ public class Utils {
         }
     }
 
-    // Helper method to validate price input
+    //validate price input
     public static double validatePriceInput(Scanner scanner, String prompt) {
         while (true) {
             System.out.print(prompt);
@@ -51,7 +53,7 @@ public class Utils {
         }
     }
 
-    // Helper method to display items as a formatted table
+    //display items as a formatted table
     public static void displayItemsAsTable(List<Map<String, Object>> items) {
         if (items.isEmpty()) {
             System.out.println("No items available.");
@@ -86,7 +88,7 @@ public class Utils {
 
     }
 
-    // Helper method to print a separator line
+    // print a separator line
     public static void printSeparator(int... columnWidths) {
         StringBuilder separator = new StringBuilder();
         for (int width : columnWidths) {
@@ -96,11 +98,9 @@ public class Utils {
         System.out.println(separator);
     }
 
-    // Helper method to truncate strings to fit column width
+    // truncate strings to fit column width
     public static String truncate(String text, int maxLength) {
         if (text == null) return "";
         return text.length() > maxLength ? text.substring(0, maxLength - 3) + "..." : text;
     }
 }
-
-

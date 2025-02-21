@@ -5,6 +5,8 @@ import services.Utils;
 
 import java.util.Scanner;
 
+import static services.Utils.scanner;
+
 public class DisplayUI {
     public void displayUI() {
         System.out.println("Welcome to the Restaurant Management System!");
@@ -14,6 +16,10 @@ public class DisplayUI {
         System.out.println("4. Admin");
         System.out.println("5. Exit");
         Scanner scanner = null;
+        if (scanner == null) {
+            scanner = new Scanner(System.in);
+        }
+
         int choice = Utils.validateIntegerInput(scanner, "Enter your choice: ", 1, 5);
         if (choice == -1) return;
         switch (choice) {
